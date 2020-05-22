@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if eror %}
+    {{ eror }}
+    <br/>
+{% endif %}
+
+<h1> Search </h1>
+
+<form method="POST" action ="">
+{% csrf_token %}
+To:
+<br/>
+<input type='text' name='To'>
+<br/>
+From:
+<br/>
+<input type='text' name='From'>
+<br/>
+Date:
+<br/>
+<input type='date' name='Date'>
+<br/>
+Adult:
+<br/>
+<input type='number' name='Adult'>
+<br/>
+Childern:
+<br/>
+<input type='number' name='Child'>
+<br/>
+<br/>
+<input class='btn btn-primary' type='submit' value='Sign Up!'>
+</form>
+{% endblock  %}
